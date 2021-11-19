@@ -1,0 +1,50 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Demo {
+    public int []arr;
+    Demo(int n){
+         arr=new int[n];
+    }
+    public void Input(){
+        Scanner sc=new Scanner(System.in);
+        for (int i=0;i< arr.length;i++){
+            arr[i]=sc.nextInt();
+        }
+    }
+    public void chk() {
+        int a=0,b=0,sum=0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 6)
+                a = i;
+            else if (arr[i] == 7)
+                b = i;
+        }
+        if(a<b)
+        {
+            for (int i = 0; i < arr.length; i++){
+                if((i)==a)
+                    i=i+(b-a+1);
+                    sum=sum+arr[i];
+            }
+        }
+        else {
+            for (int i = 0; i < arr.length; i++)
+            {
+                sum = sum + arr[i];
+            }
+        }
+        System.out.println(sum);
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the length of array");
+        int x=sc.nextInt();
+        Demo obj=new Demo(x);
+        System.out.println("Enter the element of array");
+        obj.Input();
+        obj.chk();
+    }
+}
