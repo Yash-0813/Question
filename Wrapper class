@@ -1,8 +1,0 @@
-public class wrapper2 {
-    public static void main(String[] args) {
-        int a=10;
-        System.out.println("Binary equivalent:"+Integer.toBinaryString(a));
-        System.out.println("Hexadecimal Equivalent:"+Integer.toHexString(a));
-        System.out.println("Octal Equivalent:"+Integer.toOctalString(a));
-    }
-}
